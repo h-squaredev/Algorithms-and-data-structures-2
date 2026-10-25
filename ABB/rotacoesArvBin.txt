@@ -1,0 +1,117 @@
+//Aluno1: Humberto Henrique Castro Rocha 
+//Aluno2: Julia Dantas  
+//Aluno3: Marcos Vinicius 
+
+//!! Incompleto !!
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+//estrutura de um no
+typedef struct sNoA{
+    int valor;
+    struct sNoA *esq;
+    struct sNoA *dir;
+    struct sNoA *pai;
+}TNoA;
+
+//funcao para criar um novo no
+TNoA *cria(int valor){
+    TNoA *raiz = (TNoA*)malloc(sizeof(TNoA));
+    raiz->valor = valor;
+    raiz->esq = NULL;
+    raiz->dir = NULL;
+    return raiz;
+}
+
+//funcao para inserir um novo no na ArvBin
+TNoA *insere(TNoA *no, int valor){
+    if (raiz == NULL){
+        return cria(valor);
+    }else if(valor < (raiz->valor)){
+        raiz->esq = insere(raiz->esq, valor);
+    }else if(valor > (raiz->valor)){
+        raiz->dir = insere(raiz->dir, valor);
+    }
+    return raiz;
+} 
+
+//funcao para buscar o valor/chave desejada
+TNoA *busca(TNoA *no, int valor){
+    while(no != NULL){
+        if(no->valor == valor)
+            return 1;
+    }
+}
+
+//funcao para imprimir 
+void imprime(TNoA* no, int tab){
+    if(no != NULL)
+    {
+        imprime(no->esq, tab + 2);
+        printf("%d\n", no->valor);
+        imprime(no->dir,tab = 2);
+        }
+}
+
+// Rotação simples a direita
+TNoA *rotacao_direita(TNoA *g)
+{
+    TNoA *p = g->esq;
+    g->esq = p->dir;
+    if (p->dir) p->dir->pai = g;
+    p->dir = g;
+    p->pai = g->pai;
+    g->pai = p;
+    if (g->esq) g->esq->pai = g;
+    return p;
+}
+
+// Rotação simples a esquerda
+TNoA *rotao_esquerda(TNoA *g)
+{
+    TNoA *p = g->dir;
+    g->dir = p->esq;
+    if (p->esq) p->esq->pai = g;
+    p->esq = g;
+    p->pai = g->pai;
+    g->pai = p;
+    if (g->dir) g->dir->pai = g;
+    return p;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//programa principal (main)
+int main(void)
+{
+    TNoA *raiz;
+    raiz = cria();
+    
+    int qt,value,x;
+    
+    scanf("%i",&qt);
+    
+    for(int i=0; i<qt;i++){
+        scanf("%i",&value);
+        raiz = insere(raiz,value);
+    }
+    scanf("%i",&x);
+    raiz = busca(raiz, x);
+        imprime(raiz,0);
+        return 0;
+}
+       

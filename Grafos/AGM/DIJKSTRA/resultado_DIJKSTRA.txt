@@ -1,0 +1,6 @@
+ RESULTADO DO ALGORITMO DIJKSTRA 
+Tempo de processamento: 0.182017 segundos
+
+Distancia de v1 para v1000: 28939
+Distancia de v1 para v50000: 32000
+Distancia de v1 para v100000: 32000

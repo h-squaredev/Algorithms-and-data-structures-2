@@ -1,0 +1,10 @@
+RESULTADOS DO ALGORITMO DE PRIM 
+
+Instancias: data/USA-road-d.CAL.gr
+ Custo Total: 4035569842
+ Tempo: 3540.871271 s
+--
+Instancias: data/USA-road-d.NY.gr
+ Custo Total: 261122867
+ Tempo: 65.181640 s
+--
