@@ -1,6 +1,6 @@
 # Estrutura de Dados 2
 
-Materiais e trabalhos da disciplina **Estruttura de Dados 2** (Ciência da Computação, UFMT).
+Materiais e trabalhos da disciplina **Estrutura de Dados 2** (Ciência da Computação, UFMT).
 
 ## Conteúdo
 
