@@ -1,4 +1,3 @@
-//Aluno: 202512722003
 //BFS (largura)
 #include <stdio.h>
 #include <stdlib.h>
