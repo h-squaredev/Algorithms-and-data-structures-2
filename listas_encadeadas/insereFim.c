@@ -1,5 +1,4 @@
 // Aluno: Humberto Henrique Castro Rocha
-// RGA: 202512722003
 
 #include <stdio.h>
 #include <stdlib.h>
