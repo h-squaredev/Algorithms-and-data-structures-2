@@ -1,12 +1,10 @@
-# Estrutura de Dados 2
+# Estrutura de Dados 2 (UFMT)
 
-Materiais e trabalhos da disciplina **Estrutura de Dados 2** (Ciência da Computação, UFMT).
+Árvores e grafos em C.
 
-## Conteúdo
+- **ABB/**: árvore binária de busca (simples e cheia) e anotações sobre rotações.
+- **listas_encadeadas/**: inserção no fim e inserção ordenada.
+- **Grafos/**: matriz de adjacência, BFS, DFS, coloração (DSATUR) e árvore geradora mínima (Prim) e caminhos mínimos (Dijkstra, Bellman-Ford) sobre o grafo de estradas de Nova York (USA-road-d.NY.gr, 14 MB).
+- **Estudo-prova02/**: BFS.
 
-- ABB
-- Estudo-prova02
-- Grafos
-- listas_encadeadas
-
-> Repositório organizado automaticamente em 25/10/2026.
+Para compilar: gcc arquivo.c -o programa. Os programas de Dijkstra e Bellman-Ford procuram também data/USA-road-d.CAL.gr, que não está no repositório.
