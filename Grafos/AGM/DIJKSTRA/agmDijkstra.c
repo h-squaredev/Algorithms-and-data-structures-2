@@ -235,11 +235,11 @@ int main(){
         GRAFO *gr = NULL;
         FILE *arq = fopen(instancias[i], "r");
         if (arq == NULL){
-            puts("Deu ruim");
-            return 0;
+            printf("Arquivo não encontrado: %s\n", instancias[i]);
+            continue;
         }
         
-        char entrada[50], c;
+        char c;
         int qtdnos, arcs, n1, n2, peso;
         int *p = NULL;
         
@@ -247,7 +247,7 @@ int main(){
         
         while (fscanf(arq, "%c", &c) != EOF){ //Tirei o "cont < 100 && f" para nao limitar o data
             if (c == 'c'){
-                fscanf(arq, "%[^\n]", entrada);
+                fscanf(arq, "%*[^\n]"); // descarta o resto da linha de comentário
             }
             else if (c == 'p'){
                 fscanf(arq, " sp %d %d", &qtdnos, &arcs);
