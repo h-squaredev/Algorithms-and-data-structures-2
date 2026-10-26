@@ -1,4 +1,3 @@
-//Aluno: 202512722003
 //DFS (profundidade)
 //assistindo a aula e implementando a estrutura
 #include <stdio.h>
